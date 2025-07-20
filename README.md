@@ -1,5 +1,4 @@
-Here’s an **in-depth, step-by-step guide** to your AWS Big Data Airline Delay Analysis project. This version is structured for sharing with others (e.g., on GitHub), with clear sections and instructions so anyone can follow and replicate the work.
-
+Here’s an **in-depth, step-by-step guide** to your AWS Big Data Airline Delay Analysis project. 
 ---
 
 ## ✈️ Airline Delay Analysis Using AWS EMR, Hadoop, and Tableau
