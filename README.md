@@ -95,21 +95,24 @@ LOCATION '/user/omkar_airlines/';
 ### 6. Hive Queries for Analysis
 Top 3 Delayed Airports
 Top 3 Delayed Carriers (in hours)
-Arrival vs Departure Delay Comparison
-
+Arrival vs Departure Delay Comparison:
 ```
 SELECT origin, SUM(arr_delay + dep_delay) AS total_delay
 FROM flight_data_1987
 GROUP BY origin
 ORDER BY total_delay DESC
 LIMIT 3;
-
+```
+Top 3 Delayed Carriers (in hours): 
+```
 SELECT dest, SUM(arr_delay + dep_delay)/60.0 AS delay_hours
 FROM flight_data_1987
 GROUP BY dest
 ORDER BY delay_hours DESC
 LIMIT 3;
-
+```
+Arrival vs Departure Delay Comparison
+```
 SELECT 'Arrival' AS type, AVG(arr_delay) AS avg_delay FROM flight_data_1987
 UNION ALL
 SELECT 'Departure' AS type, AVG(dep_delay) AS avg_delay FROM flight_data_1987;
