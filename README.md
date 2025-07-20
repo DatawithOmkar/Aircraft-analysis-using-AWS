@@ -117,4 +117,15 @@ SELECT 'Arrival' AS type, AVG(arr_delay) AS avg_delay FROM flight_data_1987
 UNION ALL
 SELECT 'Departure' AS type, AVG(dep_delay) AS avg_delay FROM flight_data_1987;
 ```
+---
+## Conclusion & Next Steps
+
+This project demonstrates how cloud-based big data tools like AWS EMR, Hadoop, and Hive can be used effectively to process and analyze large-scale datasets such as historical airline flight performance data. By working with millions of records across multiple years, we gained insights into which airports and carriers contribute most to flight delays, and whether arrival or departure delays dominate overall.
+
+## Potential Enhancements
+Extend the analysis to include all years from 1987 to 2008 with partitioned tables.
+Use Apache Spark or PySpark for faster, in-memory querying.
+Automate the entire pipeline with AWS Glue or Apache Airflow.
+Add interactive dashboards using Tableau Public or AWS QuickSight.
+Incorporate weather data or flight logs to identify external delay factors.
 
