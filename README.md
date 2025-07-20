@@ -219,8 +219,6 @@ airline-delay-analysis-aws/
 
 ---
 
-## 📘 README Snippet (for GitHub)
-
 ```md
 # ✈️ Airline Delay Analysis on AWS using Hadoop & Hive
 
@@ -238,8 +236,40 @@ This project analyzes large-scale flight delay data using Hadoop on AWS EMR. It 
 3. Create Hive table and run queries
 4. Export results and visualize in Tableau
 
+### Phase 2: Python & RapidMiner Classification
+1. **Read CSV** using Pandas
+2. **Select random 1000 records** for manageable testing
+3. **Add `delay` column**:
+   - If `arr_delay` or `dep_delay` <= 0 → 'N'
+   - Else → 'Y'
+4. **Save the updated CSV locally**
+5. **Combine all 1987 user data** into one dataset
+6. **Import to RapidMiner** for ML modeling
+7. **Select KNN algorithm** (or alternative model)
+8. **Run classification** on 4–5 cases, compute accuracy per case
+9. **Calculate mean accuracy** across models
+10. **Visualize outputs** using built-in RapidMiner plots
+
+## 📈 Visualizations
+- Delay comparison by airport
+- Delay analysis by carrier
+- Distribution of delay types (arrival vs departure)
+- Accuracy comparison of ML models
+
+## 🔧 How to Reproduce
+- Follow `scripts/emr_setup_steps.txt` for AWS setup
+- Run queries from `scripts/hive_queries.sql`
+- Use sample in `data/` folder
+- Open Tableau dashboard from `tableau/` folder
+- Run Python script for preprocessing (coming soon)
+- Use RapidMiner with updated CSV file for ML modeling
+
+## ✅ Results
+Screenshots of setup and results are available in the `screenshots/` folder.
+
 Dataset Source: [Harvard Dataverse](https://dataverse.harvard.edu/)
 ```
+
 
 ---
 
