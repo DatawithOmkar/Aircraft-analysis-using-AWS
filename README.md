@@ -117,6 +117,8 @@ SELECT 'Arrival' AS type, AVG(arr_delay) AS avg_delay FROM flight_data_1987
 UNION ALL
 SELECT 'Departure' AS type, AVG(dep_delay) AS avg_delay FROM flight_data_1987;
 ```
+👉 For detailed AWS setup instructions, see [AWS Cluster Setup Guide](./aws_setup.md)
+
 ---
 ## Conclusion & Next Steps
 
